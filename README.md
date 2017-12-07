@@ -39,13 +39,18 @@ Install-Package m4rcus.TuyaCore
    
 ## Usage
 
-Examples in C#:
+### Console utility
+
+```Powershell
+> dotnet m4rcus.TuyaCore.Console.dll -i <ip> -k <localKey> -d <deviceId> [status|power-on|power-off]
+```
+
+### Querying status, toggling power (async)
 
 ```C#
 using m4rcus.TuyaCore;
 ```
 
-### Querying status, toggling power (async)
 ```C#
 var device = new TuyaPlug()
 {
