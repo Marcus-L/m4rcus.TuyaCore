@@ -29,6 +29,7 @@ Install-Package m4rcus.TuyaCore
    > adb shell
    > logcat | grep BindDeviceSuccessPresenter
    ```
+1. Add the smart plug in the Tuya App, monitor the adb logcat output for the following
 1. Find the "localKey" and "devId" keys listed in the output, ex:
    ```
    12-06 23:58:53.544 17782 17782 D Tuya    : BindDeviceSuccessPresenter updateList devIds:[{"ability":0,"attribute":0,"bv":"5.06","cloudOnline":true,"devId":"0120015260091453a970","encrypt":false,"gwType":"s","i18nTime":0,"iconUrl":"https://images.tuyaus.com/smart/icon/1496461963_0.jpeg","isLocalOnline":false,"isOnline":true,"lat":"","localKey":"5f5f784cd82d449b","lon":"","name":"WiFi Plug ","pv":"2.1","rnFind":false,"runtimeEnv":"prod","supportGroup":false,"switchDp":0,"time":1512626328,"uuid":"0120015260091453a970","verSw":"1.0.4"}]
