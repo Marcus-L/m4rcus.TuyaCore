@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="2.1.0-rc" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\m4rcus.TuyaCore\m4rcus.TuyaCore.csproj" />
   </ItemGroup>
 

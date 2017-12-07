@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "m4rcus.TuyaCore.ConsoleDemo", "m4rcus.TuyaCore.ConsoleDemo\m4rcus.TuyaCore.ConsoleDemo.csproj", "{6FCB201A-6A79-421A-AD90-4B4B83CEF84B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "m4rcus.TuyaCore.Console", "m4rcus.TuyaCore.Console\m4rcus.TuyaCore.Console.csproj", "{6FCB201A-6A79-421A-AD90-4B4B83CEF84B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{7F118BB6-0CD8-428B-9DC4-9DA939F91EDD}"
 	ProjectSection(SolutionItems) = preProject
@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "m4rcus.TuyaCore", "m4rcus.TuyaCore\m4rcus.TuyaCore.csproj", "{071D5CBF-4AEC-4B06-B60E-7024DCB39792}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "m4rcus.TuyaCore", "m4rcus.TuyaCore\m4rcus.TuyaCore.csproj", "{071D5CBF-4AEC-4B06-B60E-7024DCB39792}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
