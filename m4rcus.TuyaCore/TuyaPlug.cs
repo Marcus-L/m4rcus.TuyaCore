@@ -47,7 +47,7 @@ namespace m4rcus.TuyaCore
                     if (result["dps"]["5"] != null)
                         tuyaStatus.Power_W = (double)result["dps"]["5"].ToObject(typeof(double));
                     if (result["dps"]["6"] != null)
-                        tuyaStatus.Voltage_V = (double)result["dps"]["6"].ToObject(typeof(double));
+                        tuyaStatus.Voltage_V = (double)result["dps"]["6"].ToObject(typeof(double))/10.0;
                 }
                 return (tuyaStatus);
             }
