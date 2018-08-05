@@ -1,15 +1,26 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+
 using System;
+using System.Linq;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace m4rcus.TuyaCore
 {
+    public struct TuyaStatus
+    {
+        public bool Powered;
+        public int Delay;
+        public double Current_mA;
+        public double Power_W;
+        public double Voltage_V;
+    }
+    
+
     public class TuyaPlug : TuyaDevice
     {
-        public async Task<(bool Powered, int Delay)> GetStatus()
+        public async Task<TuyaStatus> GetStatus()
         {
             var cmd = new Dictionary<string, object>
             {
@@ -22,8 +33,23 @@ namespace m4rcus.TuyaCore
             json = ReadBuffer(await Send(buffer));
             try
             {
-                dynamic result = JObject.Parse(json);
-                return (result.dps["1"], result.dps["2"]);
+                TuyaStatus tuyaStatus = new TuyaStatus();
+
+                JObject result = JObject.Parse(json);
+                if (result["dps"] != null)
+                {
+                    if (result["dps"]["1"] != null)
+                        tuyaStatus.Powered = (bool)result["dps"]["1"].ToObject(typeof(bool));
+                    if (result["dps"]["2"] != null)
+                        tuyaStatus.Delay = (int)result["dps"]["2"].ToObject(typeof(int));
+                    if (result["dps"]["4"] != null)
+                        tuyaStatus.Current_mA = (double)result["dps"]["4"].ToObject(typeof(double));                    
+                    if (result["dps"]["5"] != null)
+                        tuyaStatus.Power_W = (double)result["dps"]["5"].ToObject(typeof(double));
+                    if (result["dps"]["6"] != null)
+                        tuyaStatus.Voltage_V = (double)result["dps"]["6"].ToObject(typeof(double))/10.0;
+                }
+                return (tuyaStatus);
             }
             catch (Exception ex)
             {
