@@ -11,6 +11,7 @@ This .NET Standard 2.0 API allows programmatic control over the basic functions 
 * [Zentec Living Smart Plug Outlet with USB Port](https://www.amazon.com/gp/product/B074YGV2NK)
 * [ISELECTOR Mini Smart Plug](https://www.amazon.com/gp/product/B075XL3DRD)
 * [Xenon Smart Plug PW701U](https://www.amazon.com/Xenon-PW701U-Socket-Outlet-Android/dp/B06W55BTV5)
+* [Teckin Smart Plug SH-SP23-2-UK](https://www.amazon.co.uk/gp/product/B07CVJYV3G)
 
 Many Smart Plug devices compatible with the Tuya Smart Life and Jinvoo Smart app also appear to be compatible with the Tuya protocol.
 
@@ -39,13 +40,18 @@ Install-Package m4rcus.TuyaCore
    
 ## Usage
 
-Examples in C#:
+### Console utility
+
+```Powershell
+> dotnet m4rcus.TuyaCore.Console.dll -i <ip> -k <localKey> -d <deviceId> [status|power-on|power-off]
+```
+
+### Querying status, toggling power (async)
 
 ```C#
 using m4rcus.TuyaCore;
 ```
 
-### Querying status, toggling power (async)
 ```C#
 var device = new TuyaPlug()
 {
