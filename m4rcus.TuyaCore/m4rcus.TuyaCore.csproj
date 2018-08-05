@@ -8,8 +8,9 @@
     <PackageLicenseUrl>https://github.com/Marcus-L/m4rcus.TuyaCore/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/Marcus-L/m4rcus.TuyaCore</PackageProjectUrl>
     <PackageTags>tuya jinvoo smart plug device outlet</PackageTags>
-    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <PackageReleaseNotes>Add support for Teckin Smart Plug SH-SP23-2-UK (credit to screig)</PackageReleaseNotes>
     <Description>.NET Standard 2.0 API for programmatically controlling a Tuya-compatible Smart Plug Device</Description>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
