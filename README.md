@@ -21,22 +21,7 @@ Install-Package m4rcus.TuyaCore
 ```
 
 ## Retrieving Tuya Plug ID and LocalKey values:
-1. Install the [Tuya Smart Life](https://play.google.com/store/apps/details?id=com.tuya.smartlife) App onto your device
-1. Install ADB on your computer: https://www.xda-developers.com/install-adb-windows-macos-linux/
-1. Ensure your device has USB debugging enabled
-1. Plug device into your computer
-1. Run filtered ADB logcat via shell:
-   ```powershell
-   > adb shell
-   > logcat | grep BindDeviceSuccessPresenter
-   ```
-1. Add the smart plug in the Tuya App, monitor the adb logcat output for the following
-1. Find the "localKey" and "devId" keys listed in the output, ex:
-   ```
-   12-06 23:58:53.544 17782 17782 D Tuya    : BindDeviceSuccessPresenter updateList devIds:[{"ability":0,"attribute":0,"bv":"5.06","cloudOnline":true,"devId":"0120015260091453a970","encrypt":false,"gwType":"s","i18nTime":0,"iconUrl":"https://images.tuyaus.com/smart/icon/1496461963_0.jpeg","isLocalOnline":false,"isOnline":true,"lat":"","localKey":"5f5f784cd82d449b","lon":"","name":"WiFi Plug ","pv":"2.1","rnFind":false,"runtimeEnv":"prod","supportGroup":false,"switchDp":0,"time":1512626328,"uuid":"0120015260091453a970","verSw":"1.0.4"}]
-   ```
-   In this example, the LocalKey is `5f5f784cd82d449b` and the Id is `0120015260091453a970`
-1. Find the IP address of your device via your router's DHCP leases. The IP address reported by the app is not the local IP address.
+Check out the instructions at [codetheweb/tuyapi](https://github.com/codetheweb/tuyapi/blob/master/docs/SETUP.md)
    
 ## Usage
 
